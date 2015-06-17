@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Pro</title>
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn2").click(function(){
+        $("#div").append(function() {
+	    	return $("<br/><select id='xaxa'>")
+	        .append("<option id ='1' value='input'>Input</option>")
+	        .append("<option id ='2' value='select1'>Select</option>");
+		}
+		,"name <input type='text'>"
+		);
+    });
+});
+/*
+$( "#select" )
+  .change(function() {
+    var str = "";
+    $( "select option:selected" ).each(function() {
+      str += $( this ).text() + " ";
+    });
+    $( "#selected" ).text( str );
+  })
+  .trigger( "change" );*/
+  $("#1 option").each(function(){
+    
+    // Add $(this).val() to your list
+  });
+
+</script>
+<body>	
+	
+	<button id="btn2">Append list items</button>
+		<div id="selected">a</div>
+		<form id="div" method="POST" action='php/add.php'>
+
+		<button type="submit">finish</button>
+		</form>
+
+		
+		
+		<!-- <button type = "submit">Save</button> -->
+</body>
+</html>

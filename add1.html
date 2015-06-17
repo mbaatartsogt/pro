@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>asd</title>
+</head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function () {
+		$("#btn").click(function(){
+	        $("#form").prepend(
+	         function() {
+	    		return $("<br/><select name='xaxa'>")
+	        	.append("<option id ='1' value='submit' name='type' >submit</option>")
+	        	.append("<option id ='2' value='default' name='type' >defaukt</option>");
+			},
+			"name <input name='elName' type='text'>",
+			"<input type='button' name='elType' value='button'>"
+	         );
+    	});
+
+		$("#inp").click(function(){
+			$("#form").prepend(
+				function() {
+	    		return $("<br/><select name='xaxa'>")
+	        	.append("<option name='type' value='text'>text</option>")
+	        	.append("<option name='type' value='password'>password</option>")
+	        	.append("<option name='type' value='email'>email</option>");
+				},
+				"name <input type='text' name='elName'>",
+				"<input name='elType' type='text'  value='input'>"
+			);
+		});
+
+	});
+</script>
+<body>
+	<button id="btn">button</button>
+	<button id="inp">input</button>
+
+	<form id="form" method="POST" action="php/add.php" style="border: 1px solid">
+
+		<br/>	<input type="submit" value="fin">
+	</from>
+</body>
+</html>
